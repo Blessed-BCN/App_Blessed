@@ -1,0 +1,26 @@
+# Backups locals amb versions antigues (poden contenir secrets històrics)
+backs/
+
+# Documentació interna, notes personals, diagnòstics i infraestructura —
+# no és per al repositori públic de l'app; aniran al repositori privat (Fase 6, punt 2)
+docs/
+Documentació_meva/
+DIAGNOSTIC_*.md
+seguiment.md
+seguiment.html
+sql/
+CLAUDE.md
+RESUM_PROJECTE_BLESSED.md
+RESUM_PROJECTE_BLESSED.html
+worker.js
+nginx.conf
+
+# Sessions/config local de Claude Code
+.claude/
+
+# Fitxers grans sense ús a producció
+animació.mp4
+
+# Sistema
+.DS_Store
+Thumbs.db

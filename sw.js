@@ -1,4 +1,4 @@
-const CACHE='blessed-app-v9.11.3';
+const CACHE='blessed-app-v9.11.4';
 const ASSETS=['/index.html','/sw.js','/manifest.json','/consent_ca.html'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()).then(()=>self.clients.matchAll({type:'window',includeUncontrolled:true})).then(cs=>cs.forEach(c=>c.postMessage({type:'SW_UPDATED'}))));});

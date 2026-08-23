@@ -182,6 +182,8 @@ function omplirDades(){
   });
   var boxCom = document.getElementById('box-comunicacions');
   if(boxCom) boxCom.textContent = D.comunicacions_comercials ? 'X' : '';
+  var boxImatges = document.getElementById('box-imatges');
+  if(boxImatges) boxImatges.textContent = D.autoritza_imatges_marketing ? 'X' : '';
   qq('tutor-nom-val').forEach(function(e){e.textContent=D.tutor_nom});
   if(q('tutor-dni-val')) q('tutor-dni-val').textContent = D.tutor_dni;
   if(q('tutor-relacio-val')) q('tutor-relacio-val').textContent = D.tutor_relacio;
@@ -611,7 +613,7 @@ window.addEventListener('DOMContentLoaded',function(){
   <div class="sec">
     <div class="sec-head">El client declara:</div>
     <ul class="chk-list">
-      <li><span class="box">X</span><span class="txt">Autoritzo expressament la transmissió de la meva imatge i/o del tatuatge realitzat per a la seva difusió a través de la web i xarxes socials de l'establiment amb finalitats publicitàries.</span></li>
+      <li><span class="box" id="box-imatges"></span><span class="txt">Autoritzo l'ús de fotografies del tatuatge/servei realitzat, sense que hi aparegui la meva cara ni cap altra dada que permeti identificar-me, per a la seva difusió amb finalitats publicitàries a la web i xarxes socials de l'establiment. Aquesta autorització és independent i revocable en qualsevol moment.</span></li>
       <li><span class="box" id="box-comunicacions"></span><span class="txt">Accepto rebre comunicacions comercials de l'establiment.</span></li>
       <li><span class="box">X</span><span class="txt">Declaro que he llegit i entès la informació facilitada per aquest establiment i sóc conscient de les contraindicacions i riscos sanitaris.</span></li>
       <li><span class="box">X</span><span class="txt">Ho faig voluntàriament i sense estar sota la influència de cap substància que pugui comprometre el meu consentiment.</span></li>
